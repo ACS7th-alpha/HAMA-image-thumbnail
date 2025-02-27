@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "Fetching SonarQube Quality Gate Status..."
           STATUS=$(curl -s -u ${{ secrets.SONAR_TOKEN }}: \
-            "${{ secrets.SONAR_HOST_URL }}/api/qualitygates/project_status?projectKey=ACS7th-alpha-HAMA-imageThumnail" \
+            "${{ secrets.SONAR_HOST_URL }}/api/qualitygates/project_status?projectKey=ACS7th-alpha-HAMA-imageThumbnail" \
             | jq -r '.projectStatus.status')
 
           echo "Quality Gate Status: $STATUS"
